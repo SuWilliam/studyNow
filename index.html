@@ -1,109 +1,116 @@
 <html ng-app="studyNow">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
-<script src="listings.js"></script>
-<script src="firebase.js"></script>
-<script src="post.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="maps.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+    <script src="listings.js"></script>
+    <script src="firebase.js"></script>
+    <script src="post.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="maps.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
 
-	<div class="container-fluid" style="max-width: 1200px;">
-		<h1 class="text-center">Study Now </h1>
-		
-	<div class="well" id="box-around">
-		<div class="row">
-		
-		  <div class="col-sm-6" data-toggle="modal" data-target="#postModal">
-			<a href="#">
-			<div class="thumbnail">
-			
-			  <img src="post.png" alt="..." style="height: 40vh;">
-			  <hr>
-			  <div class="caption">
-			<h2 style="text-align:center">Post</h2>
-				</div>
-			</div>
-			</a>
-		  </div>
-		  
-			<div class="col-sm-6">
-			<a href="posts.html">
-			<div class="thumbnail">
+    <div class="container-fluid" style="max-width: 1200px;">
+        <h1 class="text-center"><strong>Study Now </strong><small>Meet people to study with!</small></h1>
 
-			  <img src="view.png" alt="..." style="height: 40vh;">
-			  <hr>
-			  <div class="caption">
-			<h2 style="text-align:center">View</h2>
-				</div>
-			</div>
-			</a>
-		  </div>
-		  
-		</div>
-	</div>
-		
-	</div>
-			
-	<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Post Your Message!</h4>
-      </div>
-      <div class="modal-body">
-        <form name="postListing">
-			<div class="form-group">
-				<label>Name: </label>
-				<input type="text" class="form-control" placeholder="Your name goes here" id="name">
-			</div>
-			<div class="form-group">
-				<label>Title: </label>
-				<input type="text" class="form-control" placeholder="Catchy title goes here" id="title">
-			</div>
-			<div class="form-group">
-				<label>Location: </label>
-				<input type="text" class="form-control" placeholder="Where will you be studying?" id="location">
-			</div>
-			<div class="form-group">
-				<label>Course: </label>
-				<input type="text" class="form-control" placeholder="What course is this?" id="course">
-			</div>
-			<div class="form-group">
-				<label>Message: </label>
-				<textarea class="form-control" id="message" rows="3" placeholder="What are you doing? What do you need help with? How long are you staying?"></textarea>
-			</div>
-		</form>
-      </div>
-      <div class="modal-footer">
-	  
-		<center>
-			<button type="button" class="btn btn-primary btn-lg" style="width: 15vw;" onclick="return validatePost();">Post</button>
-			<button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" style="width: 15vw;">Cancel</button>
-		<center>
-      </div>
+        <div class="container" style="border: 1px">
+            <p>
+                Welcome to StudyNow, your very own resource for finding study sessions happening this <em>very</em> second! Study Now lets you either view
+                study sessions happening now or even create your own. Utilize this app to make the most of your classes.
+            </p>
+        </div>
+
+        <div class="well" id="box-around">
+            <div class="row">
+
+                <div class="col-sm-6" data-toggle="modal" data-target="#postModal">
+                    <a href="#">
+                        <div class="thumbnail">
+
+                            <img src="post.png" alt="..." style="height: 40vh;">
+                            <hr>
+                            <div class="caption">
+                                <h2 style="text-align:center"><strong>Post</strong></h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-6">
+                    <a href="posts.html">
+                        <div class="thumbnail">
+
+                            <img src="view.png" alt="..." style="height: 40vh;">
+                            <hr>
+                            <div class="caption">
+                                <h2 style="text-align:center"><strong>View</strong></h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-  </div>
-</div>		
-			
 
-	</div>
-	</div>
+    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><strong>Post Your Message!</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <form name="postListing">
+                        <div class="form-group">
+                            <label>Name: </label>
+                            <input type="text" class="form-control" placeholder="Name..." id="name">
+                        </div>
+                        <div class="form-group">
+                            <label>Title: </label>
+                            <input type="text" class="form-control" placeholder="What will you be going over?" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label>Location: </label>
+                            <input type="text" class="form-control" placeholder="Where will you be studying?" id="location">
+                        </div>
+                        <div class="form-group">
+                            <label>Course: </label>
+                            <input type="text" class="form-control" placeholder="What course is this?" id="course">
+                        </div>
+                        <div class="form-group">
+                            <label>Message (Optional): </label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="What are you doing? What do you need help with? How long are you staying?"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
 
-		
-		
+                    <center>
+                        <button type="button" class="btn btn-primary btn-lg" style="width: 15vw;" onclick="return validatePost();">Post</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" style="width: 15vw;">Cancel</button>
+                        <center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+
 </body>
 </head>
 <!-- Firebase for data model -->
-<!-- Google API for location -->  
+<!-- Google API for location -->
