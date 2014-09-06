@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<script src="post.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid" style="max-width: 1200px;">
+		<h1 class="text-center">Study Now </h1>
+		
+	<div class="well" id="box-around">
+		<div class="row">
+		
+		  <div class="col-sm-6" data-toggle="modal" data-target="#postModal">
+			<a href="#">
+			<div class="thumbnail">
+			
+			  <img src="post.png" alt="..." style="height: 40vh;">
+			  <hr>
+			  <div class="caption">
+			<h2 style="text-align:center">Post</h2>
+				</div>
+			</div>
+			</a>
+		  </div>
+		  
+			<div class="col-sm-6">
+			<a href="posts.html">
+			<div class="thumbnail">
+
+			  <img src="view.png" alt="..." style="height: 40vh;">
+			  <hr>
+			  <div class="caption">
+			<h2 style="text-align:center">View</h2>
+				</div>
+			</div>
+			</a>
+		  </div>
+		  
+		</div>
+	</div>
+		
+	</div>
+			
+	<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Post Your Message!</h4>
+      </div>
+      <div class="modal-body">
+        <form name="postListing">
+			<div class="form-group">
+				<label>Title: </label>
+				<input type="text" name="b1answer" class="form-control" placeholder="Catchy title goes here" name="postTitle">
+			</div>
+			<div class="form-group">
+				<label>Location: </label>
+				<input type="text" name="b1answer" class="form-control" placeholder="Where will you be studying?" name="postLocation">
+			</div>
+			<div class="form-group">
+				<label>Course: </label>
+				<input type="text" name="b1answer" class="form-control" placeholder="What course is this?" name="postCourse">
+			</div>
+			<div class="form-group">
+				<label>Message: </label>
+				<textarea class="form-control" name="description" rows="4" placeholder="What are you doing? What do you need help with? How long are you staying?" name="postNote"></textarea>
+			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+	  
+		<center>
+			<button type="button" class="btn btn-primary btn-lg" style="width: 15vw;" onclick="return validatePost();">Post</button>
+			<button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" style="width: 15vw;">Cancel</button>
+		<center>
+      </div>
+    </div>
+  </div>
+</div>		
+			
+
+	</div>
+	</div>
+
+		
+		
+</body>
+</head>
+<!-- Firebase for data model -->
+<!-- Google API for location -->  
