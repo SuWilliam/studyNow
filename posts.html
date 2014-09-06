@@ -1,19 +1,39 @@
 <html ng-app="studyNow">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-
-<script src="listings.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+<script src="firebase.js"></script>
+<script src="post.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="maps.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<script src="post.js"></script>
-
 </head>
 
-<body>
+<style>
+      html, body, #map-canvas {
+        height: 75%;
+        margin: 0px;
+        padding: 0px
+      }
+     
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+</style>
+
+<body onload="initialize()">
 
 <div class="container-fluid" style="max-width: 1200px;" ng-controller="postsController as pc">
 
@@ -43,21 +63,18 @@
 
 			  
 				<div class="col-sm-4">
-				<div class="thumbnail">
 				  <div class="caption">
 				<h2 style="text-align:center">{{pc.course}}</h2>
 				<p>{{pc.note}}</p>
 					</div>
-				</div>
 			  </div>
 			
-			  <div class="col-sm-8">
-				<div class="thumbnail">
-				  <div class="caption">
-				<h2 style="text-align:center">{{pc.location}}</h2>
-					</div>				
+			  <div class="col-sm-8">			
 				  <div id="map-canvas"></div>
-				</div>
+				  <div>
+    			<input id="address" type="textbox" value="Sydney, NSW">
+   				 <input type="button" value="Encode" onclick="codeAddress()">
+  				</div>
 			  </div>		
 			
 			<center>

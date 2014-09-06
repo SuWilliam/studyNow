@@ -1,6 +1,6 @@
 // Checks to see whether the form fields has been filled in or not
 function validatePost() {
-alert("HI");
+//alert("HI");
 return;
 
     var title = document.forms["postListing"]["postTitle"].value;
