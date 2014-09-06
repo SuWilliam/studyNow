@@ -1,0 +1,83 @@
+<html ng-app="studyNow">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+
+<script src="listings.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="post.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="max-width: 1200px;" ng-controller="postsController as pc">
+
+	<!-- page title -->
+	<h1 class="text-center">Who's Studying? </h1>
+
+
+	<!-- dismissible alert box
+	<div class="alert alert-info" role="alert">Click on the grey bar to collapse posts!
+<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
+<span class="sr-only">Close</span>
+</button>
+</div>		
+	-->	
+
+	<div class="panel-group" id="accordion">
+	  <div class="panel panel-default">
+		<div class="panel-heading"> 
+		  <h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+			  {{pc.title}}
+			</a>
+		  </h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+		  <div class="panel-body">
+
+			  
+				<div class="col-sm-4">
+				<div class="thumbnail">
+				  <div class="caption">
+				<h2 style="text-align:center">{{pc.course}}</h2>
+				<p>{{pc.note}}</p>
+					</div>
+				</div>
+			  </div>
+			
+			  <div class="col-sm-8">
+				<div class="thumbnail">
+				  <div class="caption">
+				<h2 style="text-align:center">{{pc.location}}</h2>
+					</div>				
+				  <img src="map.png" alt="Map API" style="height: 10vw;">
+				</div>
+			  </div>		
+			
+			<center>
+			<button type="button" class="btn btn-lg btn-info" style="width: 15vw;">Yo</button>
+			</center>
+			
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+
+	
+	<center>
+		<a href="index.html">
+			<button type="button" class="btn btn-lg btn-primary" style="width: 25vw;">Back</button>
+		</a>
+	</center>
+	
+</div>
+	
+</body>
+</head>
