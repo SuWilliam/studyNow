@@ -3,9 +3,9 @@ var map;
   
 function initialize() {
     geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var latlng = new google.maps.LatLng(42.277071, -83.738279);
     var mapOptions = {
-      zoom: 8,
+      zoom: 16,
       center: latlng
     }
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
