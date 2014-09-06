@@ -2,13 +2,15 @@
 
 var database = new Firebase("https://crackling-fire-8040.firebaseio.com/");
 
-function addStudy(name, sub, lat, lng){ //add a user's study session to firebase
+function addStudy(title, name, sub, lat, lng, notes){ //add a user's study session to firebase
 	database.child(name);
 	database.child(name).update({
+			Title: title,
 			Name: name,
 			Subject: sub,
 			Latitude: lat,
-			Longitude: lng
+			Longitude: lng,
+			Notes: notes
 	});
 }
 
@@ -32,9 +34,3 @@ function getStudyInfo(){ //retrieve the info about every study session in fireba
 function deleteStudy(name){ //delete a completed study session from firebase
 	database.child(name).remove();
 }
-
-addStudy("Danielle", "Math 215", 75.0002, 23.987);
-addStudy("Jane Doe", "Engr 151", 29.0023, 5.203);
-getStudyInfo();
-deleteStudy("Danielle");
-updateSubj("Jane Doe", "Chem 125");
