@@ -36,7 +36,6 @@
 
 <body onload="initialize()">
 
-<<<<<<< HEAD
 <div class="container-fluid" style="max-width: 1200px;" ng-controller="postsController as pc">
 
 	<!-- page title -->
@@ -86,65 +85,6 @@
 			<button type="button" class="btn btn-lg btn-primary" style="width: 25vw;">Back</button>
 		</a>
 	</center>
-=======
-    <div class="container-fluid" style="max-width: 1200px;" ng-controller="postsController as pc">
-
-        <!-- page title -->
-        <h1 class="text-center"><strong>Who's Studying? </strong></h1>
-
-
-        <!-- dismissible alert box
-            <div class="alert alert-info" role="alert">Click on the grey bar to collapse posts!
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-        </button>
-        </div>
-            -->
-
-        <div class="panel-group" id="accordion">
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            <h2>{{pc.title}}</h2>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
-                    <div class="panel-body">
-
-
-                        <div class="col-sm-5">
-                            <div class="caption">
-                                <h3 style="text-align:center">{{pc.course}}</h3>
-                                <p>
-                                    {{pc.note}}<br><br>
-                                    {{2+5}}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-7">
-                            <div id="map-canvas"></div>
-                            <div>
-                                <input id="address" type="textbox" value="500 S State St, Ann Arbor, MI 48109">
-                                <input type="button" value="Encode" onclick="codeAddress()"><hr>
-                            </div>
-                        </div>
-
-                        <center>
-                            <button type="button" class="btn btn-lg btn-success" style="width: 15vw;">What does this do?</button>
-                        </center>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
->>>>>>> c3912d270d7d2a48761672bc93f0ab6b9a92fe6d
+	
 </body>
 </head>
