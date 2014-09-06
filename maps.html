@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Google Map</title>
+		<style>
+			#map-canvas {
+				width: 1000px;
+				height: 1000px;
+				background-color: #CCCCCC;
+				}
+		</style>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+				var mapCanvas = document.getElementById('map-canvas');
+				var mapOptions = {
+      center: new google.maps.LatLng(42.292322, -83.713272),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP}
+				var map = new google.maps.Map(mapCanvas, mapOptions);
+            }
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        
+	</head>
+
+	
+	<body>
+		<div id="map-canvas"></div>
+	</body>
+</html>
