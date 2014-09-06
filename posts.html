@@ -50,9 +50,9 @@
 </div>		
 	-->	
 
+	<!-- ACCORDIAN STUFF -->
 	<div class="panel-group" id="accordion">
-	  
-	  <div class="panel panel-default">
+	  <div class="panel panel-default col-sm-5">
 		<div class="panel-heading"> 
 		  <h4 class="panel-title">
 			<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -60,26 +60,18 @@
 			</a>
 		  </h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
+		<div id="collapseOne" class="panel-collapse collapse">
 		  <div class="panel-body">
 
 			  
-				<div class="col-sm-5">
+				<div>
 				  <div class="caption">
 				<h3 style="text-align:center">{{pc.course}}</h3>
 				<p>{{pc.note}}<br><br>
 				{{2+5}}</p>
 					</div>
 			  </div>
-			
-			  <div class="col-sm-7">			
-				  <div id="map-canvas"></div>
-				  <div>
-    			<input id="address" type="textbox" value="Sydney, NSW">
-   				 <input type="button" value="Encode" onclick="codeAddress()"><hr>
-  				</div>
-			  </div>		
-			
+
 			<center>
 			<button type="button" class="btn btn-lg btn-info" style="width: 15vw;">Yo</button>
 			</center>
@@ -91,13 +83,24 @@
 	</div>
 
 	
+	<!-- MAP STUFF -->
+	<div class="panel-group">
+	  <div class="panel panel-default col-sm-7">
+		
+			<div id="map-canvas" style="height:72vh; position:fixed;"></div>
+
+	  </div>
+	  
+	</div>
+
+	
+	
+</div>
+	<hr>
 	<center>
 		<a href="index.html">
 			<button type="button" class="btn btn-lg btn-primary" style="width: 25vw;">Back</button>
 		</a>
 	</center>
-	
-</div>
-	
 </body>
 </head>
