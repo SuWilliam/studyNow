@@ -10,6 +10,7 @@ app.controller('postsController', function () {
 	this.longitude = "";
 
 	this.getPosts = function(title, name, course, lat, lng, note){
+		console.log("get posts");
 		this.title = title;
 		this.name = name;
 		this.subject = course; 
@@ -18,6 +19,6 @@ app.controller('postsController', function () {
 		this.note = note;
 	}
 
-this.getPosts();
+//this.getPosts();
 
 })
