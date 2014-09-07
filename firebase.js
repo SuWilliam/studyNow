@@ -27,7 +27,9 @@ function getStudyInfo(){ //retrieve the info about every study session in fireba
 		var sessionSubj = session.Subject;
 		var sessionLat = session.Latitude;
 		var sessionLng = session.Longitude;
-	//addPin(sessionName, sessionSubj, sessionLat, sessionLng);
+		var sessionTitle = session.Title;
+		var sessionNotes = session.Notes;
+	getPosts(sessionTitle, sessionName, sessionSubj, sessionLat, sessionLng, sessionNotes);
 });
 }
 
