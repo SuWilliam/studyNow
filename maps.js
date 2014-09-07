@@ -6,7 +6,7 @@ function initialize() {
     var latlng = new google.maps.LatLng(42.277071, -83.738279);
     var mapOptions = {
       zoom: 16,
-      center: LatLng
+      center: latlng
     }
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
@@ -27,7 +27,7 @@ function codeAddress(studyLocation, title, name, course, note) {
     });
   }
 			
-/*google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 var stockholm = new google.maps.LatLng(42.277071, -83.738279);
 var parliament = new google.maps.LatLng(42.277071, -83.738279);
@@ -61,5 +61,5 @@ function toggleBounce() {
   }
 }
 
-google.maps.event.addDomListener(window, 'load', initialize); */
+google.maps.event.addDomListener(window, 'load', initialize); 
       

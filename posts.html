@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
+
+
 <style>
     html, body, #map-canvas {
         height: 75%;
@@ -32,9 +34,9 @@
 </style>
 <body onload="initialize()">
 <div class="container-fluid" style="max-width: 1200px;" ng-controller="postsController">
-	<!-- page title -->
+	<!-- page title --> 
 	<h1 class="text-center">Who's Studying? </h1>
-	<!-- MAP STUFF -->
+	<!-- MAP STUFF --> 
 	<div class="panel-group">
 	  <div class=" panel-default col-sm-7">
 			<div id="map-canvas" style="height:72vh; position:fixed;"></div>
@@ -43,11 +45,12 @@
 	<br>
 	
 	
+	
 		<!-- ACCORDIAN STUFF -->
 	<div class="panel-group" id="accordion">
 	  <div class="panel panel-info col-sm-5" ng-repeat="post in posts">
 		<div class="panel-heading panel-title"> 
-			<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{post.number}}" onclick="codeAddress(post.lol)">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{post.number}}" >
 			  <h4><b>{{post.Title}}</b></h4>
 			</a>
 		</div>
@@ -58,14 +61,18 @@
 				<p>{{post.Note}}</p>
 			</div>
 				
+
+
+
+</script>
+
 	<center>
-		<button type="button" class="btn btn-lg btn-info" style="width: 15vw;">Yo</button>
+		<button type="button" class="btn btn-lg btn-info" style="width: 15vw;"  >Let's Study!</button>
 	</center>
 		  </div>
 		</div>
 	  </div>
 	</div>
-	
 	
 	
 	

@@ -26,8 +26,8 @@ function validatePost() {
         }
 	//var note = document.forms["postListing"]["postNote"].value;
     var note = document.getElementById("message").value;
-    codeAddress(location, title, name, course, note);
-    console.log("location coordinates:", locationCoords);
+    /*codeAddress(location, title, name, course, note);*/
+    /*console.log("location coordinates:", locationCoords);*/
     //var lat = locationCoords[0];
    // var lng = locationCoords[1];
     //addStudy(title, name, course, lat, lng, note);
