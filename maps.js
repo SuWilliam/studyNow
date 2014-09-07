@@ -6,9 +6,11 @@ function initialize() {
     var latlng = new google.maps.LatLng(42.277071, -83.738279);
     var mapOptions = {
       zoom: 16,
-      center: latlng
+      center: LatLng
     }
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
   }
 
 function codeAddress(studyLocation, title, name, course, note) {
@@ -25,5 +27,39 @@ function codeAddress(studyLocation, title, name, course, note) {
     });
   }
 			
-google.maps.event.addDomListener(window, 'load', initialize);
+/*google.maps.event.addDomListener(window, 'load', initialize);
+
+var stockholm = new google.maps.LatLng(42.277071, -83.738279);
+var parliament = new google.maps.LatLng(42.277071, -83.738279);
+var marker;
+var map;
+
+function initialize() {
+  var mapOptions = {
+    zoom: 13,
+    center: stockholm
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
+  marker = new google.maps.Marker({
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: parliament
+  });
+  google.maps.event.addListener(marker, 'click', toggleBounce);
+}
+
+function toggleBounce() {
+
+  if (marker.getAnimation() != null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize); */
       
