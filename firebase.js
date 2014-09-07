@@ -33,6 +33,7 @@ function getStudyInfo(){ //retrieve the info about every study session in fireba
 	getPosts(sessionTitle, sessionName, sessionSubj, sessionLat, sessionLng, sessionNotes);
 });
 }
+getStudyInfo();
 
 function deleteStudy(name){ //delete a completed study session from firebase
 	database.child(name).remove();
