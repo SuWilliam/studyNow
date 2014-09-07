@@ -23,6 +23,7 @@ function updateSubj(name, sub){
 function getStudyInfo(){ //retrieve the info about every study session in firebase
 	database.on('child_added', function (snapshot) {
 		var session = snapshot.val();
+		console.log(session);
 		var sessionName = session.Name;
 		var sessionSubj = session.Subject;
 		var sessionLat = session.Latitude;
